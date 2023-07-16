@@ -1,0 +1,6 @@
+item,price,qty
+velvet cloth,500,20
+phone,30000,50
+headphone,2500,10
+earrings,300,35
+charger,3000,22
