@@ -15,17 +15,17 @@ while(True):
     #taking input from user for the options given
     choice = int(input("Enter your option to go forward:"))
     if choice == 1:
-        print("-"*60)
+        print("-"*70)
         print('''
                 RENTAL SHOP KATHMANDU
         THE AVAILABLE STOCKS ARE AS FOLLOW''')
         data = open("equipment.txt","r")
         items = data.readlines()
-        print("-"*60)
+        print("-"*70)
         for item in items:
             Name,Brand, Price, Quantity = item.split(",")
             print("{0}\t{1}\t{2}\t{3}".format(Name, Brand, Price, Quantity))
-        print("----------------------")
+        print("-"*70)
     elif choice == 2:
         try:
             equipmentName = input("Enter equipment name: ")
