@@ -9,8 +9,9 @@ while(True):
              Tel No. +977 9877878900
     ---------------------------------------
     1. View items in stock
-    2. Buy Items
-    3. Exit
+    2. Rent Items
+    3. Return Items
+    4. Exit
     ''')
 
     #taking input from user for the options given
@@ -32,6 +33,13 @@ while(True):
             print("{0:30s}\t\t{1:25s}\t{2:10s}\t{3:10s}".format(Name, Brand, Price, Quantity))
         print("-"*120)
     elif choice == 2:
+        try:
+            equipmentName = input("Enter equipment name: ")
+            quantity=int(input("Enter quantity: "))
+            customerName=input("Enter customer name: ")   
+        except:
+            print('Enter valid input ')
+    elif choice == 3:
         try:
             equipmentName = input("Enter equipment name: ")
             quantity=int(input("Enter quantity: "))
