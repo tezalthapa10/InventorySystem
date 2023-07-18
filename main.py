@@ -1,9 +1,10 @@
+from read import *
 #using while loop so that program will not be terminated until user decised to
 while(True):
     #printing the welcome message for users
     print('''
     ---------------------------------------
-             Welcome To Rental Shop
+            Welcome To ABC Rental Shop
                    Kathmandu,
                      Nepal
              Tel No. +977 9877878900
@@ -12,26 +13,21 @@ while(True):
     2. Rent Items
     3. Return Items
     4. Exit
+    ---------------------------------------
     ''')
 
     #taking input from user for the options given
-    choice = int(input("Enter your option to go forward:"))
+    choice = int(input("Enter your option to go forward: "))
     if choice == 1:
-        print("-"*70) #*70 will print 70 hypens(-)
-        print('''
-                RENTAL SHOP KATHMANDU
-        THE AVAILABLE STOCKS ARE AS FOLLOW''')
-        #Open the file in read mode and assign the file object to the variable 'data'
+        print("-"*90) 
+        print("\t\t\t\tTHE ITEMS IN STOCK ARE")
         data = open("equipment.txt","r")
-        #Read all lines from the file object and store them as a list of strings in the variable
         items = data.readlines()
-        print("-"*120)
+        print("-"*90)
         for item in items:
-            ##Split the string 'item' into four separate values based on the comma delimiter and assign them to variables
             Name,Brand, Price, Quantity = item.split(",")
-            #Print formatted values with specified field widths
-            print("{0:30s}\t\t{1:25s}\t{2:10s}\t{3:10s}".format(Name, Brand, Price, Quantity))
-        print("-"*120)
+            print("{0:30s}\t{1:25s}\t{2:10s}\t{3:10s}".format(Name, Brand, Price, Quantity))
+        print("-"*90)
     elif choice == 2:
         try:
             equipmentName = input("Enter equipment name: ")
@@ -46,5 +42,8 @@ while(True):
             customerName=input("Enter customer name: ")   
         except:
             print('Enter valid input ')
-    else:
+    elif choice == 4:
+        print("\t\tThankyou for using our system!! Have a great day ahead!!")
         break
+    else:
+        print("Please Enter the correct option.")
