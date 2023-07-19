@@ -46,4 +46,4 @@ while(True):
         print("\t\tThankyou for using our system!! Have a great day ahead!!")
         break
     else:
-        print("Please Enter the correct option.")
+        print("Please enter the correct option.")
